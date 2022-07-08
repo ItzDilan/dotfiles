@@ -9,7 +9,6 @@
 - [Fuente necesaria](#fuente-necesaria)
 - [Utiliza mis configuraciones](#utiliza-mis-configuraciones)
 - [Cambia la Shell por defecto](#cambia-la-shell-por-defecto)
-- [Habilita la sintaxis de color en nano](#habilita-la-sintaxis-de-color-en-nano)
 - [Temas](#temas)
 
 # Instalación de Qtile y Programas necesarios
