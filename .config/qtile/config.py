@@ -147,6 +147,7 @@ screens = [
             font = "Ubuntu Bold",
             fontsize = 12,
             foreground = colors[4],
+            format = '{name}',
             max_chars = 45,
             ),
         widget.TextBox(
