@@ -25,7 +25,7 @@ keys = [
     Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
 
     # ------ Theme Changer ------ #
-    Key([mod], "t", lazy.spawn(terminal + ' -e python3 /home/(user)/.scripts/qtiletheme.py')),
+    Key([mod], "t", lazy.spawn(terminal + ' -e python3 /home/(user)/.config/qtile/themechanger.py')),
 
     # ------ Volume ------ #
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
@@ -108,6 +108,7 @@ floating_layout = layout.Floating(
     border_width = 2,
 )
 
+# ------ Widgets ------ #
 widget_defaults = dict(
     font = "UbuntuMono Nerd Font Bold",
     fontsize = 14,
@@ -259,7 +260,7 @@ screens = [
         ),
         ]
 
-# ------ Drag floating ------ #
+# ------ Floating Mode ------ #
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
