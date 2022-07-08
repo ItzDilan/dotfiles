@@ -1,6 +1,6 @@
 # Qtile
 
-![ArchLinux+Qtile](https://user-images.githubusercontent.com/99371498/177902629-e20d1aa1-919e-405a-8f74-4a25eb8593c1.png)
+![ArchLinux+Qtile](https://user-images.githubusercontent.com/99371498/177907901-25edbbb5-1340-491c-866a-edb7152e45ab.png)
 
 # Índice 
 - [Instalación de Qtile](#instalación-de-qtile)
