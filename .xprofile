@@ -1,0 +1,23 @@
+# Wallpaper
+nitrogen --restore &
+
+# Keyboard layout
+setxkbmap latam &
+
+# Compositor
+picom &
+
+# Notification system
+dunst -print &
+
+# Screensaver
+xscreensaver --no-splash &
+
+# Battery icon
+cbatticon &
+
+# Networking
+nm-applet &
+
+# Udiskie
+udiskie -t -N &
