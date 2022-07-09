@@ -12,15 +12,28 @@ filemanager = "pcmanfm"
 
 keys = [
     # ------ Programs ------ #
+
+    # Terminal
     Key([mod], "Return", lazy.spawn(terminal)),
+
+    # Menu
     Key([mod], "m", lazy.spawn(menu)),
+
+    # File Manager
     Key([mod], "e", lazy.spawn(filemanager)),
+
+    # Browser
     Key([mod], "b", lazy.spawn(browser)),
-    Key([mod], "g", lazy.spawn("gimp")),
+    
+    # Nitrogen
     Key([mod], "n", lazy.spawn("nitrogen")),
     Key([mod, "shift"], "n", lazy.spawn("nitrogen --set-zoom-fill --random --save")),
+
+    # Redshift
     Key([mod], "r", lazy.spawn("redshift -O 4000")),
     Key([mod, "shift"], "r", lazy.spawn("redshift -x")),
+
+    # Screenshot
     Key([mod], "s", lazy.spawn("scrot")),
     Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
 
