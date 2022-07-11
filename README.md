@@ -1,6 +1,6 @@
 # Qtile
 
-![ArchLinux+Qtile](https://user-images.githubusercontent.com/99371498/177907901-25edbbb5-1340-491c-866a-edb7152e45ab.png)
+![Nighttime](https://user-images.githubusercontent.com/99371498/178377950-95031d55-2478-47c1-82a3-f2fcfc883c05.png)
 
 # Índice 
 - [Instalación de Qtile](#instalación-de-qtile)
