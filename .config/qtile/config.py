@@ -1,4 +1,5 @@
-# ------ Qtile ------ #
+# ------------ Qtile ------------ #
+
 from libqtile import bar, layout, widget, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
@@ -11,7 +12,7 @@ menu = "rofi -show drun"
 filemanager = "pcmanfm"
 
 keys = [
-    # ------ Programs ------ #
+    # ------------ Programs ------------ #
 
     # Terminal
     Key([mod], "Return", lazy.spawn(terminal)),
@@ -37,46 +38,63 @@ keys = [
     Key([mod], "s", lazy.spawn("scrot")),
     Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
 
-    # ------ Theme Changer ------ #
-    Key([mod], "t", lazy.spawn(terminal + ' -e python3 /home/(user)/.config/qtile/themechanger.py')),
+    # Theme changer
+    Key([mod], "t", lazy.spawn(terminal + ' -e python3 /home/dilan/.config/qtile/themechanger.py')),
 
-    # ------ Volume ------ #
+    # ------------ Hardware ------------ #
+
+    # Volume
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
     Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
     
-    # ------ Brightness ------ #
+    # Brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
 
-    # ------ Switch between windows ------ #
+    # ------------ Window Configs ------------ #
+
+    # Switch between windows
     Key([mod], "h", lazy.layout.left()),
     Key([mod], "l", lazy.layout.right()),
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "k", lazy.layout.up()),
 
-    # ------ Move windows columns ------ #
+    # Move windows
     Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
     Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
 
-    # ------ Grow windows ------ #
+    # Grow windows
     Key([mod, "control"], "h", lazy.layout.grow_left()),
     Key([mod, "control"], "l", lazy.layout.grow_right()),
     Key([mod, "control"], "j", lazy.layout.grow_down()),
     Key([mod, "control"], "k", lazy.layout.grow_up()),
 
-    # ------ System ------ # 
+    # ------------ System ------------ #
+
+    # Toggle between layouts
     Key([mod], "Tab", lazy.next_layout()),
+
+    # Kill focused window
     Key([mod], "q", lazy.window.kill()),
+
+    # Reload config
     Key([mod, "control"], "r", lazy.restart()),
+
+    # End session
     Key([mod, "control"], "q", lazy.shutdown()),
+
+    # Poweroff
     Key([mod, "control"], "a", lazy.spawn("poweroff")),
+
+    # Reboot
     Key([mod, "control"], "z", lazy.spawn("reboot")),
 ]
 
-# ------ Workspaces ------ #
+# ------------ Workspaces ------------ #
+
 groups = [Group(i) for i in [
     "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", " 漣 ",
 ]]
@@ -88,13 +106,16 @@ for i, group in enumerate(groups):
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
 
-# ------ Layouts ------ #
+# ------------ Layouts ------------ #
+
+# Layout theme
 layout_theme = {"border_width": 2, 
                 "margin": 4,
                 "border_focus": colors[4],
                 "border_normal": colors[0],
                 }
 
+# Layouts config
 layouts = [
     layout.Columns(
         **layout_theme,
@@ -121,7 +142,8 @@ floating_layout = layout.Floating(
     border_width = 2,
 )
 
-# ------ Widgets ------ #
+# ------------ Widgets ------------ #
+
 widget_defaults = dict(
     font = "UbuntuMono Nerd Font Bold",
     fontsize = 14,
@@ -209,7 +231,7 @@ screens = [
             "Qtile ",
             background = colors[10],
             foreground = colors[3],
-            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e nvim /home/(user)/.config/qtile/config.py')},
+            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e nvim /home/dilan/.config/qtile/config.py')},
             ),
         widget.TextBox(
             "",
@@ -273,7 +295,8 @@ screens = [
         ),
         ]
 
-# ------ Floating Mode ------ #
+# ------------ Floating Mode ------------ #
+
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
@@ -290,4 +313,4 @@ focus_on_window_activation = "smart"
 reconfigure_screens = True
 auto_minimize = True
 wl_input_rules = None
-wmname = "LG3D"
+wmname = "Qtile"
