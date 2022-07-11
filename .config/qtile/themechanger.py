@@ -43,5 +43,5 @@ elif theme == 5:
 
 # Nighttime
 elif theme == 6:
-    os.system("nitrogen --set-zoom-fill --save ~/.config/qtile/themes/Nighttime/Nighttime.jpeg")
+    os.system("nitrogen --set-zoom-fill --save ~/.config/qtile/themes/Nighttime/Nighttime.jpg")
     os.system("cp ~/.config/qtile/themes/Nighttime/colors.py ~/.config/qtile/")
