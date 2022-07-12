@@ -87,7 +87,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#404040"
+    frame_color = "#1c3e4b"
 
     # Define a color for the separator.
     # possible values are:
@@ -242,13 +242,13 @@
 
 
 [urgency_low]
-    background = "#151515"
+    background = "#0b141a"
     foreground = "#888888"
     timeout = 5
     default_icon = ~/.local/icons/bell.png
 
 [urgency_normal]
-    background = "#151515"
+    background = "#0b141a"
     foreground = "#ffffff"
     timeout = 5
     default_icon = ~/.local/icons/bell.png
