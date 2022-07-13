@@ -1,6 +1,6 @@
 # Qtile
 
-![Nighttime](https://user-images.githubusercontent.com/99371498/178377950-95031d55-2478-47c1-82a3-f2fcfc883c05.png)
+![Arch](https://user-images.githubusercontent.com/99371498/178806558-1529480e-5a1c-4aea-a09f-e1eb42dad6c2.png)
 
 # Índice 
 - [Instalación de Qtile](#instalación-de-qtile)
