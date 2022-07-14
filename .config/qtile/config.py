@@ -1,50 +1,47 @@
-# ------------ Qtile ------------ #
+### QTILE ###
 
-from libqtile import bar, layout, widget, qtile
+from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
+from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = "alacritty"
 browser = "chromium"
-menu = "rofi -show drun"
 filemanager = "pcmanfm"
+menu = "rofi -show drun"
 
 keys = [
-    # ------------ Programs ------------ #
+    ### PROGRAMS ###
 
     # Terminal
     Key([mod], "Return", lazy.spawn(terminal)),
 
+    # Browser
+    Key([mod], "b", lazy.spawn(browser)),
+
     # Menu
     Key([mod], "m", lazy.spawn(menu)),
 
+    # GIMP
+    Key([mod], "g", lazy.spawn("gimp")),
+
     # File Manager
     Key([mod], "e", lazy.spawn(filemanager)),
-    Key([mod, "shift"], "e", lazy.spawn(terminal + ' -e ranger')),
 
-    # Browser
-    Key([mod], "b", lazy.spawn(browser)),
-    
     # Nitrogen
     Key([mod], "n", lazy.spawn("nitrogen")),
     Key([mod, "shift"], "n", lazy.spawn("nitrogen --set-zoom-fill --random --save")),
 
-    # Redshift
+    # Redshit
     Key([mod], "r", lazy.spawn("redshift -O 4000")),
     Key([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
     Key([mod], "s", lazy.spawn("scrot")),
-    Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
+    Key([mod, "shift"], "s", lazy.spawn("scrot -x")),
 
-    # GIMP
-    Key([mod], "g", lazy.spawn("gimp")),
-
-    # Theme changer
-    Key([mod], "t", lazy.spawn(terminal + ' -e python3 /home/dilan/.config/qtile/themechanger.py')),
-
-    # ------------ Hardware ------------ #
+    ### HARDWARE ###
 
     # Volume
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
@@ -55,7 +52,7 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
 
-    # ------------ Window Configs ------------ #
+    ### WINDOW CONFIGS ###
 
     # Switch between windows
     Key([mod], "h", lazy.layout.left()),
@@ -63,7 +60,7 @@ keys = [
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "k", lazy.layout.up()),
 
-    # Move windows
+    # Move windows between left/right columns
     Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
     Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
@@ -75,40 +72,27 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down()),
     Key([mod, "control"], "k", lazy.layout.grow_up()),
 
-    # ------------ System ------------ #
-
-    # Toggle between layouts
+    # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout()),
-
-    # Kill focused window
     Key([mod], "q", lazy.window.kill()),
-
-    # Reload config
-    Key([mod, "control"], "r", lazy.restart()),
-
-    # End session
+    Key([mod, "control"], "r", lazy.reload_config()),
     Key([mod, "control"], "q", lazy.shutdown()),
-
-    # Poweroff
-    Key([mod, "control"], "a", lazy.spawn("poweroff")),
-
-    # Reboot
-    Key([mod, "control"], "z", lazy.spawn("reboot")),
 ]
-# ------------ Colors ------------ #
-colors = ["#0b161a","#707070",
-          "#ffffff","#ffffff",
-          "#1e4555","#ffffff",
+
+### COLORS ###
+
+colors = ["#151515","#404040",
+          "#e9e9e9","#000000",
+          "#3f5965","#ffffff",
           "#727072","#ff6188",
-          "#1a343e","#1f3e4a",
-          "#1a343e","#1f3e4a",
-          "#0e1f26","#0b141a"]
+          "#8fa1b3","#a3be8c",
+          "#b48ead","#bf616a",
+          "#232f35","#414753"]
 
-
-# ------------ Workspaces ------------ #
+### WORKSPACES ###
 
 groups = [Group(i) for i in [
-    "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", " 漣 ",
+    "NET", "SYS", "DEV", "MSC", "FLS", "MDA", "IMG", "DOC", "GFX",
 ]]
 
 for i, group in enumerate(groups):
@@ -117,8 +101,6 @@ for i, group in enumerate(groups):
         Key([mod], actual_key, lazy.group[group.name].toscreen()),
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
-
-# ------------ Layouts ------------ #
 
 # Layout theme
 layout_theme = {"border_width": 2, 
@@ -154,8 +136,6 @@ floating_layout = layout.Floating(
     border_width = 2,
 )
 
-# ------------ Widgets ------------ #
-
 widget_defaults = dict(
     font = "UbuntuMono Nerd Font Bold",
     fontsize = 14,
@@ -167,12 +147,12 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-        widget.GroupBox(
-            fontsize = 20,
-            font = "Ubuntu Mono Nerd Font",
+       widget.GroupBox(
+            fontsize = 12,
+            font = "Ubuntu Bold",
             active = colors[2],
             inactive = colors[1],
-            highlight_method = 'line',
+            highlight_method = "block",
             highlight_color = colors[12],
             urgent_alert_method = "block",
             urgent_border = colors[6],
@@ -182,9 +162,9 @@ screens = [
             other_screen_border = colors[0],
             rounded = False,
             margin_x = 0,
-            margin_y = 4,
+            margin_y = 5,
             padding_y = 15,
-            padding_x = 6,
+            padding_x = 5,
             ),
         widget.Sep(
             padding = 5,
@@ -192,32 +172,33 @@ screens = [
             background = colors[0],
             ),
         widget.WindowName(
-            font = "Ubuntu Bold",
-            fontsize = 0,
-            foreground = colors[4],
-            format = '{name}',
-            max_chars = 35,
-            ),
-        widget.Clock(
-            foreground = colors[3],
-            background = colors[0],
-            format="%d/%m/%Y   %I:%M %p ",
-            ),
-        widget.Sep(
-            padding = 174,
-            foreground = colors[0],
-            background = colors[0],
+            font = "Liberation Sans Bold",
+            fontsize = 12,
+            foreground = colors[8],
+            max_chars = 70,
             ),
         widget.TextBox(
             "",
             fontsize = 44,
-            foreground = colors[11],
+            foreground = colors[13],
+            background = colors[0],
             padding = -3,
             ),
-        widget.Sep(
-            foreground = colors[11],
-            background = colors[11],
+        widget.Systray(
+            background = colors[13],
             padding = 4,
+            ),
+        widget.Sep(
+            padding = 4,
+            foreground = colors[13],
+            background = colors[13],
+            ),
+        widget.TextBox(
+            "",
+            fontsize = 44,
+            background = colors[13],
+            foreground = colors[11],
+            padding = -3,
             ),
         widget.TextBox(
             " ",
@@ -229,7 +210,7 @@ screens = [
             "ArchLinux ",
             background = colors[11],
             foreground = colors[3],
-            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e sudo pacman -Syu')},
+            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
             ),
         widget.TextBox(
             "",
@@ -237,11 +218,6 @@ screens = [
             padding = -3,
             background = colors[11],
             foreground = colors[10],
-            ),
-        widget.Sep(
-            foreground = colors[10],
-            background = colors[10],
-            padding = 4,
             ),
         widget.TextBox(
             " ",
@@ -253,7 +229,7 @@ screens = [
             "Qtile ",
             background = colors[10],
             foreground = colors[3],
-            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e nvim /home/dilan/.config/qtile/config.py')},
+            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e nvim /home/dilan/.config/qtile/settings/keys.py')},
             ),
         widget.TextBox(
             "",
@@ -262,51 +238,41 @@ screens = [
             background = colors[10],
             padding = -3,
             ),
-        widget.CurrentLayoutIcon(
+       widget.CurrentLayoutIcon(
             background = colors[9],
             scale = 0.60,
             ),
-        widget.CurrentLayout(
+       widget.CurrentLayout(
             background = colors[9],
             foreground = colors[3],
             ),
-        widget.Sep(
+       widget.Sep(
             foreground = colors[9],
             background = colors[9],
             padding = 4,
             ),
-        widget.TextBox(
+       widget.TextBox(
             "",
             fontsize = 44,
-            foreground = colors[13],
+            foreground = colors[8],
             background = colors[9],
             padding = -3,
             ),
-        widget.Sep(
-            foreground = colors[13],
-            background = colors[13],
-            padding = 4,
-            ),
-        widget.Systray(
-            background = colors[13],
-            padding = 4,
-            ),
-        widget.Sep(
-            foreground = colors[13],
-            background = colors[13],
-            padding = 4,
+        widget.Clock(
+            foreground = colors[3],
+            background = colors[8],
+            format="  %d/%m/%Y   %I:%M %p ",
             ),
             ],
         31,
         background = colors[0],
-        margin = 4,
-        opacity = 0.95,
+        margin = 0,
+        opacity = 0.90,
         ),
         ),
         ]
 
-# ------------ Floating Mode ------------ #
-
+# Drag floating layouts.
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
