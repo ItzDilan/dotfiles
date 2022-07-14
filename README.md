@@ -17,7 +17,7 @@
 Programas que utilizo:
 
 ```bash
-sudo pacman -S xorg xorg-server lightdm lightdm-gtk-greeter qtile alacritty fish starship pcmanfm rofi nitrogen scrot redshift file-roller gvfs glib2 gvfs-mtp udiskie network-manager-applet cbatticon pulseaudio pavucontrol pamixer alsa-utils brightnessctl playerctl gedit eog arandr xdg-user-dirs ntfs-3g lxappearance vlc dunst nano neovim lsd bat lxsession xscreensaver
+sudo pacman -S xorg xorg-server lightdm lightdm-gtk-greeter qtile alacritty fish starship pcmanfm rofi nitrogen scrot redshift file-roller gvfs glib2 gvfs-mtp udiskie network-manager-applet cbatticon pulseaudio pavucontrol pamixer alsa-utils brightnessctl gedit eog arandr xdg-user-dirs ntfs-3g lxappearance vlc dunst nano neovim lsd bat lxsession xscreensaver
 ```
 
 # Genera las carpetas de usuario
@@ -36,7 +36,7 @@ Programas necesarios:
 sudo pacman -S git base-devel
 ```
 
-Clona el repositorio de Yay/Paru
+Clona el repositorio de Yay o Paru
 
 En Arch Linux y sus derivadas, podemos utilizar un "Aur Helper", para facilitar la instalación de paquetes "AUR". Aquí te dejo 2 "Aur Helpers", puedes utilizar uno o ambos:
 
@@ -71,7 +71,6 @@ paru -S picom-jonaburg-git
 
 # Fuente necesaria
 
-Si no instalamos esta fuente, las letras y widgets de mi configuración, no se podrán ver correctamente:
 
 Yay:
 
@@ -87,15 +86,14 @@ paru -S nerd-fonts-ubuntu-mono
 
 Debes reiniciar la sesión para que el sistema cargue las fuentes:
 
-# Utiliza mis configuraciones
+# Clona mi repositorio
 
-Clona mi repositorio:
 
 ```bash
 git clone https://github.com/itzdilan/dotfiles.git
 ```
 
--- Fondos de pantalla --
+Fondos de pantalla:
 
 Puedes clonar el repositorio fondos de pantalla de DistroTube:
 
@@ -109,6 +107,7 @@ Mueve las carpetas a sus lugares:
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 cp dotfiles/.xprofile ~/
+mv wallpapers/ ~/Imágenes
 ```
 
 # Cambia la Shell por defecto
