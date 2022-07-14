@@ -6,6 +6,7 @@
 - [Instalación de Qtile](#instalación-de-qtile)
 - [Genera las carpetas de usuario](#genera-las-carpetas-de-usuario)
 - [Instala un Aur Helper](#instala-un-aur-helper)
+- [Compositor de ventanas](#compositor-de-ventanas)
 - [Fuente necesaria](#fuente-necesaria)
 - [Utiliza mis configuraciones](#utiliza-mis-configuraciones)
 - [Cambia la Shell por defecto](#cambia-la-shell-por-defecto)
@@ -16,7 +17,7 @@
 Programas que utilizo:
 
 ```bash
-sudo pacman -S xorg xorg-server lightdm lightdm-gtk-greeter qtile alacritty fish pcmanfm rofi nitrogen scrot redshift file-roller gvfs glib2 gvfs-mtp udiskie network-manager-applet cbatticon pulseaudio pavucontrol pamixer alsa-utils brightnessctl playerctl gedit eog arandr picom xdg-user-dirs ntfs-3g lxappearance vlc dunst nano neovim lsd bat
+sudo pacman -S xorg xorg-server lightdm lightdm-gtk-greeter qtile alacritty fish starship pcmanfm rofi nitrogen scrot redshift file-roller gvfs glib2 gvfs-mtp udiskie network-manager-applet cbatticon pulseaudio pavucontrol pamixer alsa-utils brightnessctl playerctl gedit eog arandr xdg-user-dirs ntfs-3g lxappearance vlc dunst nano neovim lsd bat lxsession
 ```
 
 # Genera las carpetas de usuario
@@ -54,6 +55,19 @@ git clone https://aur.archlinux.org/paru-git.git
 cd paru-git/ 
 makepkg -si
 ````
+# Compositor de ventanas
+
+Yay:
+
+```bash
+yay -S picom-jonaburg-git
+```
+
+Paru:
+
+```bash
+paru -S picom-jonaburg-git
+```
 
 # Fuente necesaria
 
@@ -79,6 +93,14 @@ Clona mi repositorio:
 
 ```bash
 git clone https://github.com/itzdilan/dotfiles.git
+```
+
+-- Fondos de pantalla --
+
+Puedes clonar el repositio fondos de pantalla de DistroTube:
+
+```bash
+git clone https://gitlab.com/dwt1/wallpapers.git
 ```
 
 Mueve las carpetas a sus lugares:
@@ -134,13 +156,6 @@ En mi caso, he cambiado el tema por "antergos", puedes hacerlo modificando la l�
 webkit_theme = antergos
 ```
 
---- Tema de Fish shell ---
-
-```bash
-sudo pacman -S fisher
-fisher install IlanCosman/tide@v5
-```
-
 --- Tema de NeoVim ---
 
 Si prefieres utilizar NeoVim, aquí tienes el tema que utilizo de este:
@@ -166,3 +181,11 @@ tar xvf Vimix-1080p.tar.xz
 cd Vimix-1080p
 sudo bash install.sh
 ```
+
+--- Tema GTK ---
+
+He incluido el tema GTK que utilizo en ".themes", descomprimelo y estará disponible en "lxappearance"
+
+--- Tema de Íconos ---
+
+He incluido el tema de íconos que utilizo en ".icons", descomprimelo y lo podrás utilizar seleccionandolo mediante "lxappearance"
