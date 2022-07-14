@@ -97,7 +97,7 @@ git clone https://github.com/itzdilan/dotfiles.git
 
 -- Fondos de pantalla --
 
-Puedes clonar el repositio fondos de pantalla de DistroTube:
+Puedes clonar el repositorio fondos de pantalla de DistroTube:
 
 ```bash
 git clone https://gitlab.com/dwt1/wallpapers.git
