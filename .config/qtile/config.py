@@ -1,6 +1,6 @@
 ### QTILE ###
 
-from libqtile import bar, layout, widget
+from libqtile import bar, layout, widget, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -210,7 +210,7 @@ screens = [
             "ArchLinux ",
             background = colors[11],
             foreground = colors[3],
-            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
+            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e sudo pacman -Syu')},
             ),
         widget.TextBox(
             "",
@@ -229,7 +229,7 @@ screens = [
             "Qtile ",
             background = colors[10],
             foreground = colors[3],
-            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e nvim /home/dilan/.config/qtile/settings/keys.py')},
+            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e nvim /home/user/.config/qtile/settings/keys.py')},
             ),
         widget.TextBox(
             "",
