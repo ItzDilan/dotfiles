@@ -1,23 +1,20 @@
-# Wallpaper
-nitrogen --restore &
-
-# Keyboard layout
+# Keyboard layot
 setxkbmap latam &
 
 # Compositor
-picom &
+picom --experimental-backends &
 
-# Notification system
-dunst -print &
-
-# Screensaver
-xscreensaver --no-splash &
+# Wallpaper
+nitrogen --restore &
 
 # Battery icon
 cbatticon &
 
-# Networking
-nm-applet &
-
 # Udiskie
 udiskie -t -N &
+
+# NetworkManager
+nm-applet &
+
+# Desktop Manager
+lxsession &
