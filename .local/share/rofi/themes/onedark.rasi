@@ -26,14 +26,14 @@
   spacing: 0;
   background-color: transparent;
 
-  font: "Cantarell Regular 14";
+  font: "Liberation Sans 14";
   text-color: @text;
 }
 
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: #0b141add;
+  background-color: #151515dd;
 }
 
 mainbox {
