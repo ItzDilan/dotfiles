@@ -1,5 +1,7 @@
 # Qtile
 
+Gruvbox
+
 ![ArchLinux](https://user-images.githubusercontent.com/99371498/179362202-5008d2ea-f15a-4223-bbcd-b4183059f362.png)
 
 # Temas disponibles
