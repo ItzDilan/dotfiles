@@ -157,6 +157,9 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
 ```
 
+Selecciona el tema "Gruvbox" presionando la tecla Espacio + th en NeoVim.
+
+
 --- Tema de GRUB: ---
 
 Descarga el tema "Vimix" para GRUB:
