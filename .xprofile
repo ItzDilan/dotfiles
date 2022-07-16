@@ -1,5 +1,16 @@
-# Keyboard layot
+# Keyboard layout
+
+# Latinoamerica
 setxkbmap latam &
+
+# English (US)
+# setxkbmap us &
+
+# English (UK)
+# setxkbmap uk &
+
+# Español (España)
+# setxkbmap es &
 
 # Compositor
 picom --experimental-backends &
