@@ -1,4 +1,4 @@
-# Keyboard layout
+### Keyboard layout ###
 
 # Latinoamerica
 setxkbmap latam &
