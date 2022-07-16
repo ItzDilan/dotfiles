@@ -1,6 +1,6 @@
 # Qtile
 
-![screenshot](https://user-images.githubusercontent.com/99371498/178992999-86d2f302-a07f-43f4-b37b-7be9ed9fe288.png)
+![ArchLinux](https://user-images.githubusercontent.com/99371498/179362202-5008d2ea-f15a-4223-bbcd-b4183059f362.png)
 
 # Índice 
 - [Instalación de Qtile](#instalación-de-qtile)
@@ -183,8 +183,8 @@ sudo bash install.sh
 
 --- Tema GTK ---
 
-He incluido el tema GTK que utilizo en ".themes", descomprimelo y estará disponible en "lxappearance"
+https://www.gnome-look.org/p/1681313/
 
 --- Tema de Íconos ---
 
-He incluido el tema de íconos que utilizo en ".icons", descomprimelo y lo podrás utilizar seleccionandolo mediante "lxappearance"
+https://www.gnome-look.org/p/1681460/
