@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 2x35
+    offset = 1x33
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -68,7 +68,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 0
+    transparency = 5
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -89,7 +89,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#303030"
+    frame_color = "#686868"
 
     # Define a color for the separator.
     # possible values are:
@@ -244,13 +244,13 @@
 
 
 [urgency_low]
-    background = "#151515"
+    background = "#282828"
     foreground = "#888888"
     timeout = 10
     default_icon = ~/.local/icons/bell.png
 
 [urgency_normal]
-    background = "#151515"
+    background = "#282828"
     foreground = "#ffffff"
     timeout = 10
     default_icon = ~/.local/icons/bell.png
