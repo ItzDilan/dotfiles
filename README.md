@@ -93,13 +93,6 @@ Debes reiniciar la sesión para que el sistema cargue las fuentes:
 git clone https://github.com/itzdilan/dotfiles.git
 ```
 
-Fondos de pantalla:
-
-Puedes clonar el repositorio fondos de pantalla de DistroTube:
-
-```bash
-git clone https://gitlab.com/dwt1/wallpapers.git
-```
 
 Mueve las carpetas a sus lugares:
 
@@ -107,7 +100,6 @@ Mueve las carpetas a sus lugares:
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 cp dotfiles/.xprofile ~/
-mv wallpapers/ ~/Imágenes
 ```
 
 # Cambia la Shell por defecto
@@ -123,7 +115,7 @@ sudo usermod --shell /usr/bin/fish root
 
 --- Fondo de pantalla ---
 
-Utilizando el programa "Nitrogen", podrás cambiar los fondos de pantalla que utilices.
+Podrás encontrar algunos fondos de pantalla en "~/.config/qtile/Wallpapers/". Puedes cambiarlos utilizando Nitrogen.
 
 --- Tema de LightDM: ---
 
