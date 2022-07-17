@@ -40,9 +40,6 @@ keys = [
     # Menu
     Key([mod], "m", lazy.spawn(menu)),
 
-    # GIMP
-    Key([mod], "g", lazy.spawn("gimp")),
-
     # File Manager
     Key([mod], "e", lazy.spawn(filemanager)),
 
