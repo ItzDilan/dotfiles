@@ -25,6 +25,7 @@ if theme == 1:
     os.system("cp ~/.config/dunst/themes/Dracula/dunstrc ~/.config/dunst")
     os.system("qtile cmd-obj -o cmd -f restart")
     os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/Dracula/")
+    os.system("killall dunst")
 
 # Gruvbox Dark
 elif theme == 2:
@@ -34,6 +35,7 @@ elif theme == 2:
     os.system("cp ~/.config/dunst/themes/GruvboxDark/dunstrc ~/.config/dunst")
     os.system("qtile cmd-obj -o cmd -f restart")
     os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/GruvboxDark/")
+    os.system("killall dunst")
 
 # Nord
 elif theme == 3:
@@ -43,6 +45,7 @@ elif theme == 3:
     os.system("cp ~/.config/dunst/themes/Nord/dunstrc ~/.config/dunst")
     os.system("qtile cmd-obj -o cmd -f restart")
     os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/Nord/")
+    os.system("killall dunst")
 
 # Solarized Dark
 elif theme == 4:
@@ -52,6 +55,7 @@ elif theme == 4:
     os.system("cp ~/.config/dunst/themes/SolarizedDark/dunstrc ~/.config/dunst")
     os.system("qtile cmd-obj -o cmd -f restart")
     os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/SolarizedDark/")
+    os.system("killall dunst")
 
 # Monokai Pro
 elif theme == 5:
@@ -61,6 +65,7 @@ elif theme == 5:
     os.system("cp ~/.config/dunst/themes/MonokaiPro/dunstrc ~/.config/dunst")
     os.system("qtile cmd-obj -o cmd -f restart")
     os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/MonokaiPro/")
+    os.system("killall dunst")
 
 # MaterialOcean
 elif theme == 6:
@@ -70,3 +75,4 @@ elif theme == 6:
     os.system("cp ~/.config/dunst/themes/MaterialOcean/dunstrc ~/.config/dunst")
     os.system("qtile cmd-obj -o cmd -f restart")
     os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/MaterialOcean/")
+    os.system("killall dunst")
