@@ -29,6 +29,7 @@
 - [Autostart](#autostart)
 - [Variables](#variables)
 - [Keys](#keys)
+- [Groups](#groups)
 - [Temas](#temas)
 
 # Imports
@@ -152,6 +153,21 @@ keys = [
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod], "q", lazy.window.kill()),
 ]
+```
+
+# Groups
+
+```bash
+groups = [Group(i) for i in [
+    "NET", "SYS", "DEV", "MSC", "FLS", "MDA", "IMG", "DOC", "GFX",
+]]
+
+for i, group in enumerate(groups):
+    actual_key = str(i + 1)
+    keys.extend([
+        Key([mod], actual_key, lazy.group[group.name].toscreen()),
+        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
+    ])
 ```
 
 # Temas
