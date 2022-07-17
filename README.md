@@ -30,6 +30,7 @@
 - [Variables](#variables)
 - [Keys](#keys)
 - [Groups](#groups)
+- [Layouts](#layouts)
 - [Temas](#temas)
 
 # Imports
@@ -168,6 +169,44 @@ for i, group in enumerate(groups):
         Key([mod], actual_key, lazy.group[group.name].toscreen()),
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
+```
+
+# Layouts
+
+```bash
+# Layout theme
+layout_theme = {"border_width": 2, 
+                "margin": 4,
+                "border_focus": colors[4],
+                "border_normal": colors[0],
+                }
+
+# Layouts config
+layouts = [
+    layout.Columns(
+        **layout_theme,
+        border_on_single = True,
+        margin_on_single = 4,
+        ),
+    layout.Max(),
+    layout.Floating(
+        **layout_theme,
+        ),
+    ]
+ 
+floating_layout = layout.Floating(
+    float_rules=[
+        *layout.Floating.default_float_rules,
+        Match(wm_class="confirmreset"),
+        Match(wm_class="makebranch"),
+        Match(wm_class="maketag"),
+        Match(wm_class="ssh-askpass"),
+        Match(title="branchdialog"),
+        Match(title="pinentry"),
+    ],
+    border_focus = colors[4],
+    border_width = 2,
+)
 ```
 
 # Temas
