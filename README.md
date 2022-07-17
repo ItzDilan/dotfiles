@@ -36,7 +36,7 @@
 
 # ArchPy
 
-Obtén fácilmente mis configuraciones con este script que podrá ser ejecutado Arch Linux y distribuciones derivadas de este: <a href="https://github.com/itzdilan/ArchPy.git">ArchPy</a>
+Obtén fácilmente mis configuraciones con este script que podrá ser ejecutado Arch Linux y distribuciones derivadas de este: <a href="https://github.com/dilanrojas/ArchPy.git">ArchPy</a>
 
 # Imports
 
