@@ -20,6 +20,9 @@ nitrogen --restore &
 # Battery icon
 cbatticon &
 
+# Volume icon
+volumeicon &
+
 # Udikise (Automount disks)
 udiskie -t -N &
 
