@@ -42,6 +42,7 @@
 - [Groups](#groups)
 - [Layouts](#layouts)
 - [Widgets](#widgets)
+- [Otros](#otros)
 
 # ArchPy
 
@@ -362,7 +363,7 @@ screens = [
         ]
 ```
 
-# Others
+# Otros
 
 ```bash
 mouse = [
