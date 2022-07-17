@@ -27,6 +27,7 @@
 # Índice 
 - [Imports](#imports)
 - [Autostart](#autostart)
+- [Keys](#keys)
 - [Temas](#temas)
 
 # Imports
