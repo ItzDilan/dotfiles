@@ -1,9 +1,5 @@
 # Qtile
 
-# Temas disponibles
-
-<details><summary> <b>Imágenes (Click para expandir)</b></summary>
-
 Gruvbox
 
 ![ArchLinux](https://user-images.githubusercontent.com/99371498/179362202-5008d2ea-f15a-4223-bbcd-b4183059f362.png)
@@ -28,7 +24,6 @@ Nord
 
 ![Nord](https://user-images.githubusercontent.com/99371498/179366472-de2425b5-2755-4b4e-a10f-eca8e6b80f48.png)
 
-</details>
 
 
 # Índice 
