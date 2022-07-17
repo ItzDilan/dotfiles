@@ -50,6 +50,96 @@ def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
 ```
+# Keys
+
+```bash
+keys = [
+
+    ### PROGRAMS ###
+
+    # Terminal
+    Key([mod], "Return", lazy.spawn(terminal)),
+
+    # Browser
+    Key([mod], "b", lazy.spawn(browser)),
+
+    # Menu
+    Key([mod], "m", lazy.spawn(menu)),
+
+    # GIMP
+    Key([mod], "g", lazy.spawn("gimp")),
+
+    # File Manager
+    Key([mod], "e", lazy.spawn(filemanager)),
+
+    # Nitrogen
+    Key([mod], "n", lazy.spawn("nitrogen")),
+    Key([mod, "shift"], "n", lazy.spawn("nitrogen --set-zoom-fill --random --save")),
+
+    # Redshit
+    Key([mod], "r", lazy.spawn("redshift -O 4000")),
+    Key([mod, "shift"], "r", lazy.spawn("redshift -x")),
+
+    # Screenshot
+    Key([mod], "s", lazy.spawn("scrot")),
+    Key([mod, "shift"], "s", lazy.spawn("scrot -x")),
+
+    # Theme changer
+    Key([mod], "t", lazy.spawn(terminal + ' -e python3 ' + themechanger)),
+    
+     ### HARDWARE ###
+
+    # Volume
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
+    Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+    
+    # Brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
+    
+    ### SYSTEM ###
+
+    # Shutdown
+    Key([mod, "control"], "a", lazy.spawn("poweroff")),
+
+    # Reboot
+    Key([mod, "control"], "z", lazy.spawn("reboot")),
+
+    # Exit from Qtile
+    Key([mod, "control"], "q", lazy.shutdown()),
+
+    # Suspend
+    Key([mod, "control"], "w", lazy.spawn("xscreensaver-command -suspend")),
+
+    # Reload
+    Key([mod, "control"], "r", lazy.restart()),
+
+    ### WINDOW CONFIGS ###
+
+    # Switch between windows
+    Key([mod], "h", lazy.layout.left()),
+    Key([mod], "l", lazy.layout.right()),
+    Key([mod], "j", lazy.layout.down()),
+    Key([mod], "k", lazy.layout.up()),
+
+    # Move windows between left/right columns
+    Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
+    Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
+
+    # Grow windows
+    Key([mod, "control"], "h", lazy.layout.grow_left()),
+    Key([mod, "control"], "l", lazy.layout.grow_right()),
+    Key([mod, "control"], "j", lazy.layout.grow_down()),
+    Key([mod, "control"], "k", lazy.layout.grow_up()),
+
+    # Toggle between different layouts as defined below
+    Key([mod], "Tab", lazy.next_layout()),
+    Key([mod], "q", lazy.window.kill()),
+]
+```
 
 # Temas
 
