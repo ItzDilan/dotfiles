@@ -6,7 +6,7 @@
 
 ![Dracula](https://user-images.githubusercontent.com/99371498/179366453-41202544-c815-4665-9032-7c1a65f8d991.png)
 
-# MonokaiPro
+# Monokai Pro
 
 ![Monokai](https://user-images.githubusercontent.com/99371498/179366458-152a9c54-b1cd-4290-9658-5461e7590a8c.png)
 
