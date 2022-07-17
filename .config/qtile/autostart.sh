@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# Compositor
+### COMPOSITOR ###
+
+# Picom
 picom --experimental-backends &
 
-### Keyboard Layout ###
+### KEYBOARD LAYOUT ###
 
 # Latinoamerica
 setxkbmap latam &
@@ -14,8 +16,18 @@ setxkbmap latam &
 # English (UK)
 # setxkbmap uk &
 
+### SYSTEM STUFF ###
+
+# Screensaver
+xscreensaver --no-splash &
+
+# Desktop Manager
+lxsession &
+
 # Wallpaper
 nitrogen --restore &
+
+### SYSTRAY ###
 
 # Battery icon
 cbatticon &
@@ -28,9 +40,3 @@ udiskie -t -N &
 
 # NetworkManager
 nm-applet &
-
-# Screensaver
-xscreensaver --no-splash &
-
-# Desktop Manager
-lxsession &
