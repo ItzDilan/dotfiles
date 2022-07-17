@@ -27,6 +27,7 @@
 # Índice 
 - [Imports](#imports)
 - [Autostart](#autostart)
+- [Variables](#variables)
 - [Keys](#keys)
 - [Temas](#temas)
 
@@ -48,9 +49,23 @@ from libqtile import hook
 
 @hook.subscribe.startup_once
 def autostart():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.call([home])
+    autostart_sh = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.call([autostart_sh])
 ```
+
+# Variables
+
+```bash
+alt = "mod1"
+mod = "mod4"
+terminal = "alacritty"
+browser = "chromium"
+filemanager = "pcmanfm"
+menu = "rofi -show drun"
+themechanger = os.path.expanduser('~/.config/qtile/themes/themechanger.py')
+qtile_config = os.path.expanduser('~/.config/qtile/config.py')
+```
+
 # Keys
 
 ```bash
