@@ -24,7 +24,7 @@
 
 
 
-# Índice 
+# Index
 - [Imports](#imports)
 - [Autostart](#autostart)
 - [Variables](#variables)
@@ -32,7 +32,6 @@
 - [Groups](#groups)
 - [Layouts](#layouts)
 - [Widgets](#widgets)
-- [Temas](#temas)
 
 # Imports
 
@@ -348,17 +347,3 @@ screens = [
         ),
         ]
 ```
-
-# Temas
-
---- Tema de GRUB: ---
-
-https://www.gnome-look.org/p/1009236/
-
---- Tema GTK ---
-
-https://www.gnome-look.org/p/1681313/
-
---- Tema de Íconos ---
-
-https://www.gnome-look.org/p/1681460/
