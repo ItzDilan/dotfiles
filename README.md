@@ -36,7 +36,7 @@
 
 # ArchPy
 
-<a href="https://github.com/itzdilan/ArchPy.git>ArchPy</a>
+<a href="https://github.com/itzdilan/ArchPy.git">ArchPy</a>
 
 # Imports
 
