@@ -196,7 +196,7 @@ screens = [
         widget.WindowName(
             font = "Liberation Sans Bold",
             fontsize = 12,
-            foreground = colors[4],
+            foreground = colors[11],
             max_chars = 50,
             ),
        widget.TextBox(
