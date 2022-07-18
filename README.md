@@ -28,7 +28,7 @@
 
 # Rxyhn
 
-![Rxyhn](https://user-images.githubusercontent.com/99371498/179432513-cb699a2e-ace9-4ab7-8bb3-2ad24d50cc67.png)
+![Rxyhn](https://user-images.githubusercontent.com/99371498/179432879-50f184cb-28b7-4004-a944-1ca40c59065f.png)
 
 # Contenidos
 - [ArchPy](#archpy)
