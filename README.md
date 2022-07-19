@@ -26,10 +26,6 @@
 
 ![Tomorrow Night](https://user-images.githubusercontent.com/99371498/179424479-a7de63c4-adc1-422c-ae63-596d436388c2.png)
 
-# Rxyhn
-
-![Rxyhn](https://user-images.githubusercontent.com/99371498/179432879-50f184cb-28b7-4004-a944-1ca40c59065f.png)
-
 # Contenidos
 - [ArchPy](#archpy)
 - [Imports](#imports)
