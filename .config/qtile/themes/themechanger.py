@@ -12,7 +12,6 @@ def menu():
     print(Fore.GREEN + "5. Monokai Pro")
     print(Fore.RED + "6. Material Ocean")
     print(Fore.LIGHTCYAN_EX + "7. TomorrowNight")
-    print(Fore.LIGHTBLUE_EX + "8. Rxyhn")
     print(Fore.WHITE + "------------------")
 
 menu()
@@ -88,13 +87,3 @@ elif theme == 7:
     os.system("qtile cmd-obj -o cmd -f restart")
     os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/TomorrowNight/")
     os.system("killall dunst")
-
-# Rxyhn
-elif theme == 8:
-    os.system("cp ~/.config/qtile/themes/Rxyhn/colors.py ~/.config/qtile/themes")
-    os.system("cp ~/.config/alacritty/themes/Rxyhn/alacritty.yml ~/.config/alacritty")
-    os.system("cp ~/.local/share/rofi/themes/Rxyhn/onedark.rasi ~/.local/share/rofi/themes")
-    os.system("cp ~/.config/dunst/themes/Rxyhn/dunstrc ~/.config/dunst")
-    os.system("qtile cmd-obj -o cmd -f restart")
-    os.system("nitrogen --set-zoom-fill --save --random ~/.config/qtile/themes/Rxyhn/")
-    os.system("killall dunst'")
