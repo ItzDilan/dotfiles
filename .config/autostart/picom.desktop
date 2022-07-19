@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Picom
-Exec=picom --experimental-backends
-Comment=Compositor
