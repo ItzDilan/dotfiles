@@ -2,8 +2,8 @@
 # Written by xscreensaver-settings 6.04 for dilan on Tue Jul 19 19:01:14 2022.
 # https://www.jwz.org/xscreensaver/
 
-timeout:	0:20:00
-cycle:		12:00:00
+timeout:	00:20:00
+cycle:		00:20:00
 lock:		False
 lockTimeout:	0:10:00
 passwdTimeout:	0:00:30
