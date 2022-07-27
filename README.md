@@ -31,7 +31,7 @@
 ![Rxyhn](https://user-images.githubusercontent.com/99371498/179657987-cb968239-3f91-48d8-adbf-6a8c05b4b004.png)
 
 # Contenidos
-- [ArchPy](#archpy)
+- [Programas y configuraciones](#programas-y-configuraciones)
 - [Imports](#imports)
 - [Autostart](#autostart)
 - [Variables](#variables)
@@ -41,9 +41,56 @@
 - [Widgets](#widgets)
 - [Otros](#otros)
 
-# ArchPy
+# Programas y configuraciones
 
-Obtén fácilmente mis configuraciones con este script que podrá ser ejecutado en Arch Linux y distribuciones derivadas de este: <a href="https://github.com/dilanrojas/ArchPy.git">ArchPy</a>
+Dependencias:
+
+```bash
+sudo pacman -S xorg xorg-server lightdm lightdm-gtk-greeter qtile alacritty fish starship pcmanfm rofi nitrogen scrot redshift file-roller gvfs glib2 gvfs-mtp udiskie network-manager-applet cbatticon pulseaudio pavucontrol pamixer alsa-utils brightnessctl gedit eog arandr xdg-user-dirs ntfs-3g lxappearance vlc dunst nano neovim lsd bat lxsession xscreensaver ttf-ubuntu-font-family ttf-liberation volumeicon gnome-themes-extra gtk-engine-murrine python-colorama
+```
+
+```bash
+yay -S picom-jonaburg-git nerd-fonts-jetbrains-mono nerd-fonts-ubuntu-mono
+```
+
+Habilitar servicio de LightDM:
+
+```bash
+sudo systemctl enable lightdm
+```
+
+Fish como shell:
+
+```bash
+sudo usermod --shell /usr/bin/fish $USER
+sudo usermod --shell /usr/bin/fish root
+```
+
+Tema de LightDM:
+
+```bash
+sudo pacman -S lightdm-webkit2-greeter
+yay -S lightdm-webkit-theme-aether
+```
+
+Tema de NeoVim (NvChad)
+
+```bash
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+```
+
+Clonar este repositorio y utilizar mis configuraciones:
+
+```bash
+git clone https://github.com/dilanrojas/dotfiles.git
+cp -r dotfiles/.config ~/
+cp -r dotfiles/.local ~/
+chmod +x ~/.config/qtile/autostart.sh
+sudo cp -r ~/.config/nvim /root/
+sudo cp -r ~/.config/starship.toml /root
+sudo cp -r ~/.config/fish /root/
+xdg-user-dirs-update
+```
 
 # Imports
 
