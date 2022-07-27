@@ -2,36 +2,9 @@
 
 ![ArchLinux](https://user-images.githubusercontent.com/99371498/179362202-5008d2ea-f15a-4223-bbcd-b4183059f362.png)
 
-# Dracula
-
-![Dracula](https://user-images.githubusercontent.com/99371498/179366453-41202544-c815-4665-9032-7c1a65f8d991.png)
-
-# Monokai Pro
-
-![Monokai](https://user-images.githubusercontent.com/99371498/179366458-152a9c54-b1cd-4290-9658-5461e7590a8c.png)
-
-# Material Ocean
-
-![MaterialOcean](https://user-images.githubusercontent.com/99371498/179366463-b1bef5d9-9b33-4162-8c49-ee2c629c1425.png)
-
-# Solarized Dark
-
-![SolarizedDark](https://user-images.githubusercontent.com/99371498/179366467-0ad962cb-d4b7-4bb0-b16d-2fe21b036130.png)
-
-# Nord
-
-![Nord](https://user-images.githubusercontent.com/99371498/179366472-de2425b5-2755-4b4e-a10f-eca8e6b80f48.png)
-
-# Tomorrow Night
-
-![Tomorrow Night](https://user-images.githubusercontent.com/99371498/179424479-a7de63c4-adc1-422c-ae63-596d436388c2.png)
-
-# Rxyhn
-
-![Rxyhn](https://user-images.githubusercontent.com/99371498/179657987-cb968239-3f91-48d8-adbf-6a8c05b4b004.png)
-
 # Contenidos
 - [Programas y configuraciones](#programas-y-configuraciones)
+- [Keybindings](#keybindings)
 - [Imports](#imports)
 - [Autostart](#autostart)
 - [Variables](#variables)
@@ -90,6 +63,50 @@ sudo cp -r ~/.config/nvim /root/
 sudo cp -r ~/.config/starship.toml /root
 sudo cp -r ~/.config/fish /root/
 xdg-user-dirs-update
+```
+
+# Keybindings
+
+```bash
+------------ Programas ------------
+Win + T = Cambiador de temas
+Win + Enter = Terminal
+Win + B = Navegador Web
+Win + M = Menú Rofi
+Win + E = Explorador de archivos
+Win + N = Nitrogen [Fondos de pantalla]
+Win + Shift + N = Fondo de pantallla aleatorio
+Win + R = Activa luz nocturna [Redshift]
+Win + Shift + R = Desactiva luz nocturna
+Win + S = Tomar captura de pantalla completa
+Win + Shift + S = Tomar captura recortada
+
+------------ Sistema ------------
+Win + Control + A = Apagar el equipo
+Win + Control + Z = Reiniciar el equipo
+Win + Control + Q = Cerrar sesión
+Win + Control + W = Suspender
+Win + Control + R = Recargar Qtile
+
+------------ Configuración de ventanas ------------
+
+--- Cambiar entre ventanas ---
+Win + H = Ventana de la izquierda
+Win + L = Ventana de la derecha
+Win + J = Ventana de abajo
+Win + K = Ventana de arriba
+
+--- Mover ventanas ---
+Win + Shift + H = Hacia la izquierda
+Win + Shift + L = Hacia la derecha
+Win + Shift + J = Hacia arriba
+Win + Shift + K = Hacia abajo
+
+--- Aumentar tamaño de ventanas ---
+Win + Control + H = Aumentar hacia la izquierda
+Win + Control + L = Aumentar hacia la derecha
+Win + Control + J = Aumentar hacia abajo
+Win + Control + K = Aumentar hacia arriba
 ```
 
 # Imports
