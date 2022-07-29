@@ -191,7 +191,7 @@
     min_icon_size = 0
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 64
 
     # Paths to default icons.
     icon_path = /usr/share/icons/Adwaita/32x32/
@@ -244,13 +244,13 @@
 
 
 [urgency_low]
-    background = "#1d1f21"
+    background = "#14161b"
     foreground = "#888888"
     timeout = 10
     default_icon = ~/.local/icons/bell.png
 
 [urgency_normal]
-    background = "#1d1f21"
+    background = "#14161b"
     foreground = "#ffffff"
     timeout = 10
     default_icon = ~/.local/icons/bell.png
