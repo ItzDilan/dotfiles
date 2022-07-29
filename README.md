@@ -1,6 +1,6 @@
 # Gruvbox Dark
 
-![ArchLinux](https://user-images.githubusercontent.com/99371498/179362202-5008d2ea-f15a-4223-bbcd-b4183059f362.png)
+![dotfiles](https://user-images.githubusercontent.com/99371498/181835284-eb0bbcc2-2a89-4116-a511-e773a8cf8795.png)
 
 # Contenidos
 - [Programas y configuraciones](#programas-y-configuraciones)
