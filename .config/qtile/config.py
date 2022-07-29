@@ -20,9 +20,8 @@ def autostart():
 alt = "mod1"
 mod = "mod4"
 terminal = "alacritty"
-browser = "chromium"
+browser = "firefox"
 filemanager = "pcmanfm"
-terminal_filemanager = "ranger"
 menu = "rofi -show drun"
 themechanger = os.path.expanduser('~/.config/qtile/themes/themechanger.py')
 qtile_config = os.path.expanduser('~/.config/qtile/config.py')
@@ -40,12 +39,8 @@ keys = [
     # Menu
     Key([mod], "m", lazy.spawn(menu)),
 
-    # GIMP
-    Key([mod], "g", lazy.spawn("gimp")),
-
     # File Manager
     Key([mod], "e", lazy.spawn(filemanager)),
-    Key([mod, "shift"], "e", lazy.spawn(terminal + ' -e ' + terminal_filemanager)),
 
     # Nitrogen
     Key([mod], "n", lazy.spawn("nitrogen")),
