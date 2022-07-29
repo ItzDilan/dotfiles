@@ -1,4 +1,4 @@
-# Gruvbox Dark
+# Qtile
 
 ![dotfiles](https://user-images.githubusercontent.com/99371498/181835284-eb0bbcc2-2a89-4116-a511-e773a8cf8795.png)
 
