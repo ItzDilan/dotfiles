@@ -19,11 +19,11 @@
 Dependencias:
 
 ```bash
-sudo pacman -S xorg xorg-server lightdm lightdm-gtk-greeter qtile alacritty fish starship pcmanfm rofi nitrogen scrot redshift file-roller gvfs glib2 gvfs-mtp udiskie network-manager-applet cbatticon pulseaudio pavucontrol pamixer alsa-utils brightnessctl gedit eog arandr xdg-user-dirs ntfs-3g lxappearance vlc dunst nano neovim lsd bat lxsession xscreensaver ttf-ubuntu-font-family ttf-liberation volumeicon gnome-themes-extra gtk-engine-murrine python-colorama
+sudo pacman -S xorg xorg-server lightdm lightdm-gtk-greeter qtile alacritty fish starship pcmanfm rofi nitrogen scrot redshift file-roller gvfs glib2 gvfs-mtp udiskie network-manager-applet cbatticon pulseaudio pavucontrol pamixer alsa-utils brightnessctl gedit eog arandr xdg-user-dirs ntfs-3g lxappearance vlc dunst nano neovim lsd bat lxsession xscreensaver ttf-ubuntu-font-family ttf-liberation volumeicon gnome-themes-extra gtk-engine-murrine python-colorama papirus-icon-theme
 ```
 
 ```bash
-yay -S picom-jonaburg-git nerd-fonts-jetbrains-mono nerd-fonts-ubuntu-mono
+yay -S picom-jonaburg-git nerd-fonts-jetbrains-mono nerd-fonts-ubuntu-mono matcha-gtk-theme-git
 ```
 
 Habilitar servicio de LightDM:
