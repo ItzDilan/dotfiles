@@ -3,12 +3,15 @@
 ### COMPOSITOR ###
 
 # Picom
-#picom --experimental-backends &
+picom --experimental-backends &
 
 ### KEYBOARD LAYOUT ###
 
 # Latinoamerica
 setxkbmap latam &
+
+# Español (España)
+# setxkbmap es &
 
 # English (US)
 # setxkbmap us &
@@ -24,8 +27,13 @@ xscreensaver --no-splash &
 # Desktop Manager
 lxsession &
 
-# Wallpaper
-#nitrogen --restore &
+### WALLPAPER ###
+
+# Use the default wallpaper
+nitrogen --set-zoom-fill --save ~/.config/qtile/wallpaper.jpg &
+
+# Restore the last wallpaper
+# nitrogen --restore &
 
 ### SYSTRAY ###
 
@@ -35,7 +43,7 @@ cbatticon &
 # Volume icon
 volumeicon &
 
-# Udikise (Automount disks)
+# Udikise (Automount drives)
 udiskie -t -N &
 
 # NetworkManager
