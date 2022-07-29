@@ -1,6 +1,6 @@
 # Qtile
 
-![dotfiles](https://user-images.githubusercontent.com/99371498/181835470-4da91339-a60f-4fba-bec8-bf081e18038c.png)
+![dotfiles](https://user-images.githubusercontent.com/99371498/181835608-3663296c-8e0b-4204-ae8b-e938d7a21983.png)
 
 # Contenidos
 - [Programas y configuraciones](#programas-y-configuraciones)
