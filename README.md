@@ -9,6 +9,7 @@
 - [Autostart](#autostart)
 - [Variables](#variables)
 - [Keys](#keys)
+- [Colores](#colores)
 - [Groups](#groups)
 - [Layouts](#layouts)
 - [Widgets](#widgets)
@@ -230,6 +231,18 @@ keys = [
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod], "q", lazy.window.kill()),
 ]
+```
+
+# Colores
+
+```bash
+colors = ["#1d1f21","#727072",
+          "#ffffff","#ffffff",
+          "#7da4f6","#ffffff",
+          "#727072","#ff6188",
+          "#7197e7","#a77ac4",
+          "#7197e7","#a77ac4",
+          "#232f35","#727072"]
 ```
 
 # Groups
