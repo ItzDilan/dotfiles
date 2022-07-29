@@ -59,9 +59,9 @@ git clone https://github.com/dilanrojas/dotfiles.git
 cp -r dotfiles/.config ~/
 cp -r dotfiles/.local ~/
 chmod +x ~/.config/qtile/autostart.sh
-sudo cp -r ~/.config/nvim /root/
-sudo cp -r ~/.config/starship.toml /root
-sudo cp -r ~/.config/fish /root/
+sudo cp -r ~/.config/nvim /root/.config/
+sudo cp -r ~/.config/starship.toml /root/.config/
+sudo cp -r ~/.config/fish /root/.config/
 xdg-user-dirs-update
 ```
 
