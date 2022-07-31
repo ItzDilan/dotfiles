@@ -1,6 +1,6 @@
 colors:
     primary:
-      background: '#1d1f21'
+      background: '#101010'
       foreground: '#c5c8c6'
 
     # Colors the cursor will use if `custom_cursor_colors` is true
@@ -10,24 +10,24 @@ colors:
 
     # Normal colors
     normal:
-      black:   '#1d1f21'
-      red:     '#cc6666'
-      green:   '#b5bd68'
-      yellow:  '#e6c547'
-      blue:    '#81a2be'
-      magenta: '#b294bb'
-      cyan:    '#70c0ba'
+      black:   '#252525'
+      red:     '#ff2929'
+      green:   '#02cd4d'
+      yellow:  '#ffb20f'
+      blue:    '#5c6ab2'
+      magenta: '#c54bcf'
+      cyan:    '#4bc7cf'
       white:   '#ffeaf0'
 
     # Bright colors
     bright:
       black:   '#666666'
-      red:     '#ff3334'
-      green:   '#9ec400'
-      yellow:  '#f0c674'
-      blue:    '#81a2be'
-      magenta: '#b77ee0'
-      cyan:    '#54ced6'
+      red:     '#ff2929'
+      green:   '#02cd4d'
+      yellow:  '#ffb20f'
+      blue:    '#5c6ab2'
+      magenta: '#c54bcf'
+      cyan:    '#4bc7cf'
       white:   '#ffffff'
 
 ### FONTS ###
@@ -60,4 +60,4 @@ window:
   padding:
     y: 2
     x: 2
-  opacity: 0.95
+  opacity: 0.95 
